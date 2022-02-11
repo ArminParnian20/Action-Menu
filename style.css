@@ -67,7 +67,7 @@ section::before{
     padding:10px;
     z-index:10;
     border-radius:10px;
-    backdrop-filter:blur(25px);
+    backdrop-filter:blur(10px);
     display:flex;
     flex-direction: column;
     justify-content:center;
@@ -84,7 +84,7 @@ section::before{
     background:#fff;
     height:70px;
     display: flex;
-    justify-content:space-between;
+    justify-content:flex-start;
     align-items: center;
     border-radius:10px;
     padding:10px;
@@ -178,13 +178,12 @@ section::before{
 
  @media screen and (max-width:400px){
     .list .user .details h3{
-        font-weight:600;
-        font-size:0.9em;
+        font-size:1em;
         margin-bottom:3px;
     }
     .list .user .details p{
         font-weight:500;
-        font-size:0.6em;
+        font-size:0.7em;
     }
     .navigation{
         position: relative;
