@@ -67,7 +67,6 @@ section::before{
     padding:10px;
     z-index:10;
     border-radius:10px;
-    backdrop-filter:blur(10px);
     display:flex;
     flex-direction: column;
     justify-content:center;
