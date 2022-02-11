@@ -220,4 +220,9 @@ section::before{
         width:40vw;
         height:40vw;
     }
+    .list .user{
+        height:70px;
+        width:180px;
+    
+    }
  }
