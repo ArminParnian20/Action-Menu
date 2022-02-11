@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="box">
+          <div class="list">
+              <div class="user">
+                  <div class="imgBx">
+                      <img src="armin.jpg">
+                  </div>
+                  <div class="details">
+                      <h3>Armin Parnian</h3>
+                      <p>Electrical engineer</p>
+                  </div>
+              </div>
+              <div class="navigation">
+                  <span><i class="fab fa-instagram"></i></span>
+                  <span><i class="fab fa-whatsapp"></i></span>
+                  <span><i class="fab fa-telegram"></i></span>
+              </div>
+          </div>
+          <div class="list">
+            <div class="user">
+                <div class="imgBx">
+                    <img src="pouya.jpg">
+                </div>
+                <div class="details">
+                    <h3>Pouya Rajabi</h3>
+                    <p>Architect engineer</p>
+                </div>
+            </div>
+            <div class="navigation">
+                <span><i class="fab fa-instagram"></i></span>
+                <span><i class="fab fa-whatsapp"></i></span>
+                <span><i class="fab fa-telegram"></i></span>
+            </div>
+        </div>
+        
+        </div>
+    </section>
+    <script src="fontawesome/js/all.js"></script>
+    <script>
+        let navigation=document.querySelectorAll('.navigation');
+        navigation.forEach((i)=>i.onclick=function(){
+            this.classList.toggle('active')
+        })
+    </script>
+</body>
+</html>

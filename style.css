@@ -1,0 +1,223 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+section{
+    position: relative;
+    background:#161623;
+    min-height:100vh;
+    overflow: hidden;
+    width:100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+section::after{
+    content:'';
+    position:absolute;
+    width:40vw;
+    height:40vw;
+    background:linear-gradient(#e65c00,#f9d423);
+    border-radius:50%;
+    transform: translate(25vw,-25vw);
+    animation: anime1 3s linear infinite alternate;
+
+}
+section::before{
+    content:'';
+    position:absolute;
+    width:40vw;
+    height:40vw;
+    background:linear-gradient(#5433ff,#a5fecb);
+    border-radius:50%;
+    transform: translate(-20vw,10vw);
+    animation: anime2 3s linear infinite alternate;
+
+}
+@keyframes anime1 {
+  0%{
+    transform:translate(30vw,-30vw);
+
+  }
+  100%{
+      transform:translate(25vw,-25vw);
+  }  
+}
+@keyframes anime2 {
+    0%{
+      transform:translate(-30vw,20vw);
+  
+    }
+    100%{
+        transform:translate(-20vw,10vw);
+    }  
+  }
+.box{
+    font-family:cursive;
+    position: relative;
+    min-width:95vw;
+    min-height:70vh;
+    background:rgba(255,255,255,0.1);
+    box-shadow:0 25px 45px rgba(0, 0, 0, 0.1);
+    border:1px solid rgba(255,255,255,0.5);
+    border:1px solid rgba(255,255,255,0.5);
+    border-bottom:1px solid rgba(255,255,255,0.2);
+    border-right:1px solid rgba(255,255,255,0.2);
+    padding:10px;
+    z-index:10;
+    border-radius:10px;
+    backdrop-filter:blur(10px);
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+.list{
+    display:flex;
+    gap:6px;
+    margin-bottom:2rem;
+    user-select: none;
+}
+.list .user{
+    position: relative;
+    background:#fff;
+    height:70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:10px;
+    padding:10px;
+    gap:10px;
+}
+.list .user .imgBx{
+    position: relative;
+    width:50px;
+    height:50px;
+    overflow: hidden;
+    border-radius:6px;
+}
+.list .user .imgBx img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+.list .user .details{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.list .user .details h3{
+    font-weight:600;
+    line-height:1.1em;
+}
+.list .user .details p{
+    font-weight:500;
+    font-size:0.8em;
+    color:rgba(0, 0, 0, 0.6);
+}
+.navigation{
+    position: relative;
+    width:40px;
+    height:70px;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition:0.5s;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation.active{
+  width:200px;
+}
+.navigation span{
+    position:absolute;
+    width:6px;
+    height:6px;
+    background: #222327;
+    border-radius:50%;
+    transition:0.5s;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:#222327;
+    font-size:0;
+    
+}
+.navigation span:nth-child(1){
+    transform: translateY(-12px);
+}
+.navigation span:nth-child(3){
+    transform: translateY(12px);
+}
+.navigation.active span{
+    width:50px;
+    height:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition:0.5s;
+}
+.navigation.active span:nth-child(1){
+    transform: translateY(0) translateX(-60px);
+}
+.navigation.active span:nth-child(3){
+    transform: translateY(0) translateX(60px);
+}
+.navigation.active span{
+   font-size:1.5em;
+   color:#fff;
+}
+.navigation.active span:hover{
+    color:#222327;
+    background-color: #29fd53;
+ }
+
+ @media screen and (max-width:400px){
+    .list .user .details h3{
+        font-weight:600;
+        font-size:0.9em;
+        margin-bottom:3px;
+    }
+    .list .user .details p{
+        font-weight:500;
+        font-size:0.6em;
+    }
+    .navigation{
+        position: relative;
+        width:30px;
+        height:70px;
+      
+    }
+    .list{
+        gap:4px;
+    }
+    .navigation.active{
+        width:140px;
+      }
+      .navigation.active span{
+        width:35px;
+        height:35px;
+    }
+    .navigation.active span{
+        font-size:1.2em;
+     }
+     .navigation.active span:nth-child(1){
+        transform: translateY(0) translateX(-45px);
+    }
+    .navigation.active span:nth-child(3){
+        transform: translateY(0) translateX(45px);
+    }
+    section::after{
+        width:60vw;
+        height:60vw;
+    
+    }
+    section::before{
+        width:40vw;
+        height:40vw;
+    }
+ }
